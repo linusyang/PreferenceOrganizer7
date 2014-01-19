@@ -74,7 +74,7 @@ static NSMutableArray *AppleSpecifiers;
 CHDeclareClass(PrefsListController)
 CHOptimizedMethod(0, self, NSMutableArray *, PrefsListController, specifiers)
 {
-//    NSLog(@"specifiers class");
+    //    NSLog(@"specifiers class");
     NSMutableArray *specifiers = CHSuper(0, PrefsListController, specifiers);
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -83,7 +83,7 @@ CHOptimizedMethod(0, self, NSMutableArray *, PrefsListController, specifiers)
         for (PSSpecifier *s in specifiers) {
             if (s->cellType == 0) {
                 group++;
-              //  NSLog(@"Identifier: %ld - %@", (long) group, [s identifier]);
+                //  NSLog(@"Identifier: %ld - %@", (long) group, [s identifier]);
                 if (group >= 3) {
                     [savedSpecifiers setObject:[NSMutableArray array]forKey:[NSNumber numberWithInteger:group]];
                 } else {
@@ -91,7 +91,7 @@ CHOptimizedMethod(0, self, NSMutableArray *, PrefsListController, specifiers)
                 }
             }
             if (group >= 3) {
-             //   NSLog(@"Identifier: %ld - %@", (long) group, [s identifier]);
+                //   NSLog(@"Identifier: %ld - %@", (long) group, [s identifier]);
                 [[savedSpecifiers objectForKey:[NSNumber numberWithInteger:group]]addObject:s];
             }
         }
@@ -115,20 +115,20 @@ CHOptimizedMethod(0, self, NSMutableArray *, PrefsListController, specifiers)
             [specifiers removeObjectsInArray:AppleSpecifiers];
             [AppleSpecifiers removeObjectAtIndex:0];
             PSSpecifier *appleSpecifier = [PSSpecifier preferenceSpecifierNamed:@"Apple Apps" target:self set:NULL get:NULL
-                                                                            detail:[AppleSpecifiersController class]
-                                                                              cell:[PSTableCell cellTypeFromString:@"PSLinkCell"] edit:Nil];
-            [appleSpecifier setProperty:[UIImage _applicationIconImageForBundleIdentifier:@"com.apple.Music" 
-                                        format:0 scale:[UIScreen mainScreen].scale] forKey:@"iconImage"];
+                                                                         detail:[AppleSpecifiersController class]
+                                                                           cell:[PSTableCell cellTypeFromString:@"PSLinkCell"] edit:Nil];
+            [appleSpecifier setProperty:[UIImage _applicationIconImageForBundleIdentifier:@"com.apple.Music"
+                                                                                   format:0 scale:[UIScreen mainScreen].scale] forKey:@"iconImage"];
             [specifiers addObject:appleSpecifier];
         }
         if (SocialSpecifiers.count > 0) {
             [specifiers removeObjectsInArray:SocialSpecifiers];
             [SocialSpecifiers removeObjectAtIndex:0];
             PSSpecifier *socialSpecifier = [PSSpecifier preferenceSpecifierNamed:@"Social" target:self set:NULL get:NULL
-                                                                            detail:[SocialSpecifiersController class]
-                                                                              cell:[PSTableCell cellTypeFromString:@"PSLinkCell"] edit:Nil];            
-            [socialSpecifier setProperty:[UIImage imageWithContentsOfFile:@"/Applications/Preferences.app/FacebookSettings.png"] 
-                                        forKey:@"iconImage"];
+                                                                          detail:[SocialSpecifiersController class]
+                                                                            cell:[PSTableCell cellTypeFromString:@"PSLinkCell"] edit:Nil];
+            [socialSpecifier setProperty:[UIImage imageWithContentsOfFile:@"/Applications/Preferences.app/FacebookSettings.png"]
+                                  forKey:@"iconImage"];
             [specifiers addObject:socialSpecifier];
         }
         if (CydiaSpecifiers.count > 0) {
@@ -138,7 +138,7 @@ CHOptimizedMethod(0, self, NSMutableArray *, PrefsListController, specifiers)
                                                                          detail:[CydiaSpecifiersController class]
                                                                            cell:[PSTableCell cellTypeFromString:@"PSLinkCell"] edit:Nil];
             [cydiaSpecifier setProperty:[UIImage _applicationIconImageForBundleIdentifier:@"com.saurik.Cydia"
-                                        format:0 scale:[UIScreen mainScreen].scale] forKey:@"iconImage"];
+                                                                                   format:0 scale:[UIScreen mainScreen].scale] forKey:@"iconImage"];
             [specifiers addObject:cydiaSpecifier];
         }
         if (AppStoreSpecifiers.count > 0) {
@@ -158,7 +158,7 @@ CHOptimizedMethod(0, self, NSMutableArray *, PrefsListController, specifiers)
 CHOptimizedMethod(0, self, void, PrefsListController, refresh3rdPartyBundles)
 {
     CHSuper(0, PrefsListController, refresh3rdPartyBundles);
-//    CHSuper(0, PrefsListController, reloadSpecifiers);
+    //    CHSuper(0, PrefsListController, reloadSpecifiers);
     NSMutableArray *savedSpecifiers = [NSMutableArray array];
     BOOL go = NO;
     for (PSSpecifier *s in CHIvar(self, _specifiers, NSMutableArray *)) {
@@ -178,9 +178,9 @@ CHOptimizedMethod(0, self, void, PrefsListController, refresh3rdPartyBundles)
     AppStoreSpecifiers = [savedSpecifiers retain];
 }
 CHOptimizedMethod(0, self, void, PrefsListController, reloadSpecifiers) {
- //   CHSuper(0, PrefsListController, reloadSpecifiers);
- //   NSLog(@"Reload specifiers");
- //   CHSuper(0, PrefsListController, specifiers);
+    //   CHSuper(0, PrefsListController, reloadSpecifiers);
+    //   NSLog(@"Reload specifiers");
+    //   CHSuper(0, PrefsListController, specifiers);
 }
 
 CHConstructor
