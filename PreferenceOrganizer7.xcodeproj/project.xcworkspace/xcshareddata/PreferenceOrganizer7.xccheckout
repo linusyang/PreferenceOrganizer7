@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>47ABA989-F3B8-4A76-882F-9881A0E284F3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PreferenceOrganizer7</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>74BBA422-C07F-422C-BD2B-919D4ABE07BF</key>
+		<string>https://github.com/angelXwind/PreferenceOrganizer7.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PreferenceOrganizer7.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>74BBA422-C07F-422C-BD2B-919D4ABE07BF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/angelXwind/PreferenceOrganizer7.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>74BBA422-C07F-422C-BD2B-919D4ABE07BF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>74BBA422-C07F-422C-BD2B-919D4ABE07BF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PreferenceOrganizer7</string>
+		</dict>
+	</array>
+</dict>
+</plist>

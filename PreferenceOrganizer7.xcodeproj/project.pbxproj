@@ -331,6 +331,7 @@
 				9C00CA87188B656700BA1D83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
