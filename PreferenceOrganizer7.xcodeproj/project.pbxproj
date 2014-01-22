@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B294A3B188FA76D00081715 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B294A3A188FA76D00081715 /* UIKit.framework */; };
+		4B294A3D188FA78F00081715 /* Preferences.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B294A3C188FA78F00081715 /* Preferences.framework */; };
 		9C00CA74188B656700BA1D83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C00CA73188B656700BA1D83 /* Foundation.framework */; };
 		9C00CA7E188B656700BA1D83 /* PreferenceOrganizer7.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9C00CA7D188B656700BA1D83 /* PreferenceOrganizer7.mm */; };
 		9C00CA8A188B667000BA1D83 /* libsubstrate.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C00CA89188B667000BA1D83 /* libsubstrate.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B294A3A188FA76D00081715 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4B294A3C188FA78F00081715 /* Preferences.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Preferences.framework; path = System/Library/PrivateFrameworks/Preferences.framework; sourceTree = SDKROOT; };
 		9C00CA70188B656700BA1D83 /* PreferenceOrganizer7.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = PreferenceOrganizer7.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C00CA73188B656700BA1D83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C00CA79188B656700BA1D83 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
@@ -20,7 +24,7 @@
 		9C00CA7C188B656700BA1D83 /* PreferenceOrganizer7-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PreferenceOrganizer7-Prefix.pch"; sourceTree = "<group>"; };
 		9C00CA7D188B656700BA1D83 /* PreferenceOrganizer7.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = PreferenceOrganizer7.mm; sourceTree = "<group>"; };
 		9C00CA82188B656700BA1D83 /* PreferenceOrganizer7.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = PreferenceOrganizer7.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/PreferenceOrganizer7.plist; sourceTree = "<group>"; };
-		9C00CA89188B667000BA1D83 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = ../../../../opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<group>"; };
+		9C00CA89188B667000BA1D83 /* libsubstrate.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsubstrate.dylib; path = /opt/iOSOpenDev/lib/libsubstrate.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C00CA8A188B667000BA1D83 /* libsubstrate.dylib in Frameworks */,
+				4B294A3D188FA78F00081715 /* Preferences.framework in Frameworks */,
+				4B294A3B188FA76D00081715 /* UIKit.framework in Frameworks */,
 				9C00CA74188B656700BA1D83 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -57,6 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				9C00CA89188B667000BA1D83 /* libsubstrate.dylib */,
+				4B294A3C188FA78F00081715 /* Preferences.framework */,
+				4B294A3A188FA76D00081715 /* UIKit.framework */,
 				9C00CA73188B656700BA1D83 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -270,6 +278,10 @@
 				CODE_SIGN_IDENTITY = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PreferenceOrganizer7/PreferenceOrganizer7-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
@@ -294,6 +306,10 @@
 				CODE_SIGN_IDENTITY = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PreferenceOrganizer7/PreferenceOrganizer7-Prefix.pch";
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;

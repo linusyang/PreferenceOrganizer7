@@ -70,7 +70,7 @@ CHOptimizedMethod(0, self, NSMutableArray *, PrefsListController, specifiers)
         NSMutableDictionary *savedSpecifiers = [NSMutableDictionary dictionary];
         NSInteger group = -1;
         for (PSSpecifier *s in specifiers) {
-            if (s.cellType == 0) {
+            if (s->cellType == 0) {
                 group++;
                 if (group >= 3) {
                     [savedSpecifiers setObject:[NSMutableArray array]forKey:[NSNumber numberWithInteger:group]];
